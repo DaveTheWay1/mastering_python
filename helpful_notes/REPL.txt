@@ -1,0 +1,6 @@
+Python comes with an interactive REPL (Read-Evaluate-Print-Loop) that 
+provides a way to run Python code by typing it in.
+
+Here you can type in python code and run it by pressing enter.
+
+To exit, type exit() or press control + d to exit the REPL.

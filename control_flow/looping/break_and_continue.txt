@@ -1,0 +1,11 @@
+The break and continue Statements
+
+The break statement: 
+    used to immediately exit for and while loops 
+    and continue executing any statements that may follow them.
+
+
+The continue statement: 
+    used to immediately return to the top of 
+    the for or while loop. In the case of a while loop, its conditional expression is once 
+    again evaluated to determine if the loop should continue.

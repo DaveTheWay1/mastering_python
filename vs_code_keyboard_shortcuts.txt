@@ -1,0 +1,36 @@
+Basic Editing
+Cmd + X: Cut line
+Cmd + C: Copy line
+Cmd + V: Paste line
+Cmd + Z: Undo
+Cmd + Shift + Z: Redo
+Cmd + D: Select next occurrence of current word
+Option + ↑ / ↓: Move line up/down
+Navigation
+Cmd + P: Quick open file
+Cmd + G: Go to line
+Cmd + Shift + O: Go to symbol (methods and functions in the current file)
+Cmd + Shift + F: Search in files
+Code Formatting
+Shift + Option + F: Format document
+Integrated Terminal
+Ctrl + `: Toggle terminal
+Debugging
+F5: Start debugging
+F9: Toggle breakpoint
+Version Control
+Cmd + Shift + G: Open source control view
+Extensions
+Cmd + Shift + X: Show extensions view
+Window Management
+Cmd + N: New window/instance
+Cmd + W: Close window/instance
+Additional Useful Shortcuts
+Cmd + Shift + P: Show Command Palette
+Cmd + B: Toggle sidebar visibility
+Cmd + K, Cmd + S: Open keyboard shortcuts editor
+
+
+
+These shortcuts are tailored for macOS, helping you navigate and work efficiently in VS Code. 
+For a comprehensive list, you can also refer to Code > Preferences > Keyboard Shortcuts or by pressing Cmd + K, Cmd + S.

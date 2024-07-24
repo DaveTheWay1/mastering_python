@@ -1,0 +1,49 @@
+Basic Navigation and File Management:
+ls: List directory contents.
+
+ls
+ls -la  # List all files including hidden files with detailed information
+cd: Change directory.
+
+cd /Users/yourusername/Documents
+cd ..  # Move up one directory
+cd ~   # Go to home directory
+pwd: Print working directory.
+
+pwd
+mkdir: Make directories.
+
+mkdir new_folder
+mkdir -p new_folder/sub_folder  # Create nested directories
+rm: Remove files or directories.
+
+rm file.txt
+rm -r folder_to_delete  # Remove a directory and its contents
+cp: Copy files or directories.
+
+cp source.txt destination.txt
+cp -r source_folder destination_folder  # Copy a directory
+mv: Move or rename files or directories.
+
+mv oldname.txt newname.txt
+mv file.txt /path/to/destination/
+touch: Create an empty file or update the timestamp of a file.
+
+touch newfile.txt
+File Viewing and Editing:
+cat: Concatenate and display files.
+
+cat file.txt
+less: View file content interactively.
+
+less largefile.txt
+nano: Simple text editor in the terminal.
+
+nano file.txt
+vim or vi: Advanced text editor in the terminal.
+
+vim file.txt
+open: Open files and directories using the default application.
+
+open file.txt
+open .  # Open the current directory in Finder

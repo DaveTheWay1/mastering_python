@@ -1,0 +1,88 @@
+1. Python is a very object-oriented language.
+    In fact, pretty much everything in Python is an object that’s been instantiated (created) by a particular class.
+
+    Checking the Data Type (class) of an Object
+    We use the type() function to obtain the class used to instantiate the data:
+
+    >>> type(42)
+    <class 'int'>
+    >>> type('hello')
+    <class 'str'>
+    >>> type(True)
+    <class 'bool'>
+
+2. Declaring - there is no undefined in Python
+    Here is how we declare a variable in Python:
+
+    my_number = 15
+    Notice that there is no var, let, or const keyword in Python. We only need the name of the variable and then we can assign to it.
+
+    However, you cannot just declare a variable without assigning to it - there is no undefined in Python:
+
+    # illegal syntax...
+    my_variable
+    NameError: name 'my_variable' is not defined
+
+3. Integer Division
+    You can force the result to be an integer when dividing two integers using // instead of /:
+
+    >>> quotient = 5 // 2
+    >>> quotient
+    2
+    # 2 is printed, because the decimal ".5" is truncated
+
+4. in Python, a string is a sequence of characters. Therefore, len() works on strings
+
+5. What is Falsy in python?
+    False
+    None
+    Zero in any numeric type: 0, 0.0 and 0j
+    Empty sequences or collections:
+    '' (empty string)
+    [] (empty list)
+    () (empty tuple)
+    {} (empty dictionary)
+    range(0) (empty range)
+
+6. and (and) or. What gets returned first in regards to truthy/falsy
+        or
+        If the first operand is truthy, return it, otherwise return the second operand.
+        and
+        If the first operand is falsy, return it, otherwise return the second operand. 
+
+7. not
+        “Flips” the truthiness/falsyness of its operand, and returns True or False
+
+8. The break and continue Statements
+
+        The break statement: 
+            used to immediately exit for and while loops 
+            and continue executing any statements that may follow them.
+        The continue statement: 
+            used to immediately return to the top of 
+            the for or while loop. In the case of a while loop, its conditional expression is once 
+            again evaluated to determine if the loop should continue.
+
+9. Range in regards to looping:
+        Ranges have a class (type) of range.
+
+
+10. Two types of control flow in python:
+        Branching and Looping  
+
+11. How to get TERMINAL INPUTS:
+        example:
+            var = input("Please enter something: ")
+            print("You entered: " + var)
+
+12. Python has a for in and an if in
+
+13. General Purpose Containers
+        As you’ve learned, applications frequently need to maintain collections of data.
+        We use a container data structures to hold these collections of data…
+
+14. Dictionaries:
+        - In Python, we commonly refer to key: value pairs as items vs. properties as in JS.
+        - Dictionaries have a class (type) of dict.
+        - Unlike in JS, when strings are used as keys, they must be quoted.
+        - # * Any immutable type can be used as a key, including numbers and tuples 
