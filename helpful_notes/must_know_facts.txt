@@ -86,3 +86,17 @@
         - Dictionaries have a class (type) of dict.
         - Unlike in JS, when strings are used as keys, they must be quoted.
         - # * Any immutable type can be used as a key, including numbers and tuples 
+
+15. Lists:
+        - class type list
+        - in the list are items - in javascript theyre referred to as elements
+        - Lists are considered to be a sequence type in Python. 
+        - A sequence is a generic term used for an ordered collection. 
+        - Other sequence types in Python include strings and tuples.
+        - we can use negative integers to index from the end of a list:
+            colors[-1]
+        - Unlike with JS arrays, assigning to a non-existing index results in an error:
+        - enumerate is used to access index:
+            for idx, color in enumerate(colors):
+                print(idx, color)
+    
