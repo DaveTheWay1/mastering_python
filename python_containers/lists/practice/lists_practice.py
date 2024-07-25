@@ -10,3 +10,16 @@
 # Iterate over the items in the scores list and print a string with this format
 #  <name> scored <points> points
 # for each dictionary item in the list.
+
+scores = [
+  {
+    'name': 'david',
+    'points': 25  # points the player scored
+  }
+]
+
+scores.append({'name':'gisselle', 'points':32})
+print(scores)
+
+for score in scores:
+  print(f"name: {score['name']}, score: {score['points']}")
