@@ -30,3 +30,22 @@ for key, val in student.items():
 
 # The for statement “unpacks” the tuples by assigning 
 # its values to multiple variables like with key, val above.
+
+stats = {
+  'name':'david ramirez-vazquez',
+  'age': 24,
+  'occupation':'security officer',
+  'security_clearence':True,
+  'clearence_level':'secret',
+  'adobe_digital_academy_scholar':True
+}
+
+print(stats)
+
+for key,value in stats.items():
+  if key == 'security_clearence' and value == True:
+    print(f"{key}: {value} - clearnece level: {stats['clearence_level']}")
+  elif(key == 'clearence_level'):
+    continue
+  else:
+    print(f"{key}: {value}")

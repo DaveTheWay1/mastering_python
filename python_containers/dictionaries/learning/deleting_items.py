@@ -13,3 +13,9 @@ print('age' in student)
 
 
 # ! 👀 A del statement does not return a value
+
+student['security'] = True
+print(student)
+
+del student['security']
+print(student)
