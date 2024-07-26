@@ -16,3 +16,27 @@ for idx, color in enumerate(colors):
 # > 0 red
 # > 1 green
 # > 2 blue
+
+for color in enumerate(colors):
+  print(f"color: {color}")
+# color: (0, 'red')
+# color: (1, 'green')
+# color: (2, 'blue')
+  for item in color:
+    print(item)
+
+# color: (0, 'red')
+# 0
+# red
+# color: (1, 'green')
+# 1
+# green
+# color: (2, 'blue')
+# 2
+# blue
+
+for idx, color in enumerate(colors):
+  print(color)
+# red
+# green
+# blue
