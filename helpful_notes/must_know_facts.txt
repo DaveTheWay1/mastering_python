@@ -99,4 +99,25 @@
         - enumerate is used to access index:
             for idx, color in enumerate(colors):
                 print(idx, color)
+
+16. Tuples:
+        - paranthesis are optional but are the convention
+        - ALL TUPLES REQUIRE COMMAS, EVEN SINGLES
+                ex:
+                - Will not create a tuple
+                    hello_tuple = ('Hello')
+                    print( type(hello_tuple) )
+                    # >  <class 'str'>
+
+                    hello_tuple = ('Hello',)
+                    # or just the following (no parens required)
+                    hello_tuple = 'Hello',
+                    print( type(hello_tuple) )
+                    # > <class 'tuple'>
+        - Since tuples can’t be changed after they are created, 
+        they are great for protecting data that you don’t want to be changed.
+        - Tuples internally are “lighter weight” than lists and Python iterates 
+        over tuples faster than lists.
+        - Generally, you’ll find that tuples are used to contain heterogeneous (different) 
+        data types and lists for homogeneous (similar) data types.
     
