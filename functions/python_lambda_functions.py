@@ -16,10 +16,14 @@
 
 # * Python
 nums = [1, 3, 2, 6, 5]
-odds = list( filter(lambda num: num % 2, nums) )
+odds = list( filter(lambda num: num >= 2, nums) )
 print(odds)
 
 # Lambda functions are nifty when using Python functions 
 # such as map() and filter() - just like how arrow functions are nifty 
 # when using array iterator methods.
 
+# * The identifier used with *, i.e., 
+# args, can be anything, however by convention, use args.
+
+# Always use the *args parameter after any required positional parameters. For example:
