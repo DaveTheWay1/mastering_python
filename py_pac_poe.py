@@ -23,71 +23,47 @@ def change_turns():
 
     
 def check_win(move):
-    board_spaces_length = len(list(state['board'].items()))
-    board_spaces = list(state['board'].items())
+    listed_element_in_move = list(move)
+    letter = listed_element_in_move[0] 
+    num = int(listed_element_in_move[1])
+    print(type(letter),type(num))
 
-    for space in board_spaces:
-        move_in_board_space_item = space[0]
-        # print(type((list(move_in_board_space_item))[0]))
-        if move == move_in_board_space_item:
-
-            # * the work for all the way up and all the way up and all the way down
-            print(f"move: {move}")
-            print(f"move value: {state['board'][move]}")
-            count = 0
-            # if count  == 0:
-            letter = (list(move_in_board_space_item))[0]
-            num = str(int((list(move_in_board_space_item))[1]) + 1)
-            next_space = letter + num
-            print(f"next space down: {next_space}")
-            result = state['board'].get(next_space)
-            print(f"next space value: {result}")
-            if state['board'][move] == result:
-                print("match")
-                count += 1
-                num = str(int((list(move_in_board_space_item))[1]) + 2)
-                next_space = letter + num
-                print(f"next space down: {next_space}")
-                result = state['board'].get(next_space)
-                print(f"next space value: {result}")
-                if state['board'][move] == result:
-                    count += 1
-                    print(count)
-                    print("you win!")
-            else:
-                print("no match")
-                letter = (list(move_in_board_space_item))[0]
-                num = str(int((list(move_in_board_space_item))[1]) - 1)
-                next_space = letter + num
-                print(f"next space up: {next_space}")
-                result = state['board'].get(next_space)
-                print(f"next space value: {result}")
-                if state['board'][move] == result:
-                    print("match")
-                    num = str(int((list(move_in_board_space_item))[1]) - 2)
-                    next_space = letter + num
-                    print(f"next space up: {next_space}")
-                    result = state['board'].get(next_space)
-                    print(f"next space value: {result}")
-                    if state['board'][move] == result:
-                        count += 1
-                        print(count)
-                        print("you win!")
-                else:
-                    print("no match")
-        # else:
-        #     print("")
+    print(move)
+    print(state['board'][move])
+    next_move_north = letter + str(num - 1)
+    next_move_south = letter + str(num + 1)
+    # north and south check
+    if next_move_north in state['board'] and next_move_south in state['board']:
+        if state['board'][move] == (state['board'][next_move_north]) and state['board'][move] == state['board'][next_move_south]:
+            print("match")
+        else:
+            print("no match")
+    else:
+        print("one of the moves' space might not exist")
+    if next_move_north in state['board']: 
+        if state['board'][move] == (state['board'][next_move_north]):
+            print("match")
+            next_move_north = letter + str(num - 2)
+            if next_move_north in state['board']:
+                if state['board'][move] == (state['board'][next_move_north]):
+                    print("match you win")
+    if next_move_south in state['board']: 
+        if state['board'][move] == (state['board'][next_move_south]):
+            print("match")
+            next_move_south = letter + str(num + 2)
+            if next_move_south in state['board']:
+                if state['board'][move] == (state['board'][next_move_south]):
+                    print("match you win")
 
 def get_move():
-    letters_and_nums = ['a', 'b', 'c', 1, 2, 3]
     move = input(f"Player {state['turn']}'s Move (example B2):")
-    if len(list(move)) != 2 or list(move)[0] not in letters_and_nums or int(list(move)[1]) not in letters_and_nums or state['board'][move] != None:
-        print("Bogus move! Try again... not the required length")
-        return 
-    else:
+    if move in state['board']:
         state['board'][move] = state['turn']
         check_win(move)
         change_turns()
+    else:
+        print("Bogus move! Try again... not the required length")
+        return
 
 # The following works
 def init_game():
@@ -103,11 +79,12 @@ def init_game():
     ----------------------
     ''')
 
+    while state['winner'] != True:
+        print_board()
+        get_move()
+    print('You Win!')
+
 init_game()
-while state['winner'] != True:
-    print_board()
-    get_move()
-print('You Win!')
 
 # def get_winner():
 #     state['winner']
