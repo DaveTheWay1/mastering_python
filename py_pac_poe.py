@@ -25,7 +25,16 @@ def check_win(move):
     listed_element_in_move = list(move)
     letter = listed_element_in_move[0] 
     num = int(listed_element_in_move[1])
-    print(type(letter),type(num))
+    center_space = state['board']['b2']
+
+    # * diagnol from center win check
+    print(f"b2:{center_space}")
+    if move == 'b2':
+        if state['board']['a1'] == state['board'][move] and state['board']['c3'] == state['board'][move]:
+            state['winner'] = True
+        elif state['board']['c1'] == state['board'][move] and state['board']['a3'] == state['board'][move]:
+            state['winner'] = True
+    # * diagnol from center win check complete
 
     print(move)
     print(state['board'][move])
