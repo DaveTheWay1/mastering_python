@@ -120,4 +120,29 @@
         over tuples faster than lists.
         - Generally, you’ll find that tuples are used to contain heterogeneous (different) 
         data types and lists for homogeneous (similar) data types.
-    
+
+17. Functions
+        - assigning a function to a variable upon creation of that function will not work.
+        only after the function has been declared can it then be assigned to a variable.
+        - python does not hoist functions. functions must first be delcared before ever called.
+
+18. Lambda's must be all on one line.
+
+19. Python’s * Parameter Specifier (*args)
+        - The identifier used with *, i.e., args, can be anything, however by convention, use args.
+            
+            - Always use the *args parameter after any required positional parameters. For example:
+
+            def dev_skills(dev_name, *args):
+            dev = {'name': dev_name, 'skills': []}
+            # args will be a tuple
+            for skill in args:
+                dev['skills'].append(skill)
+            return dev
+
+            print(dev_skills('Alex', 'HTML', 'CSS', 'JavaScript', 'Python'))
+            # -> {'name': 'Alex', 'skills': ['HTML', 'CSS', 'JavaScript', 'Python']}
+
+20. Using dir() on an existing string, dictionary, list, etc.. will tell you all its attributes and methods
+
+21. For an in depth description of all attributes and methods.. you can use the help() function

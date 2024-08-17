@@ -26,9 +26,24 @@ def check_win(move):
     letter = listed_element_in_move[0] 
     num = int(listed_element_in_move[1])
     center_space = state['board']['b2']
+    coners = ['a1','c1', 'a3', 'c3']
+
+    if move in coners:
+        if state['board'][move] == center_space:
+            if letter == 'a' and num == 1:
+                if center_space == state['board']['c3']:
+                    state['winner'] = True
+            if letter == 'c' and num == 1:
+                if center_space == state['board']['a3']:
+                    state['winner'] = True
+            if letter == 'a' and num == 3:
+                if center_space == state['board']['c1']:
+                    state['winner'] = True
+            if letter == 'c' and num == 3:
+                if center_space == state['board']['a1']:
+                    state['winner'] = True
 
     # * diagnol from center win check
-    print(f"b2:{center_space}")
     if move == 'b2':
         if state['board']['a1'] == state['board'][move] and state['board']['c3'] == state['board'][move]:
             state['winner'] = True
@@ -36,14 +51,9 @@ def check_win(move):
             state['winner'] = True
     # * diagnol from center win check complete
 
-    print(move)
-    print(state['board'][move])
-
     # * west and east space check
-    print(f"printing letter: {letter}")
     if letter == "a":
         next_letter_right = "b"
-        print(f"right of {letter}: {next_letter_right + str(num)}")
         next_space_right = next_letter_right + str(num)
         if state['board'][move] == state['board'][next_space_right]:
             next_letter_right = "c"
@@ -53,18 +63,15 @@ def check_win(move):
                 print(f"player {state['turn']} wins!")
     elif letter == "b":
         next_letter_right = "c"
-        print(f"right of {letter}: {next_letter_right + str(num)}")
         next_letter_left = "a"
-        print(f"left of {letter}: {next_letter_left + str(num)}")
         if state['board'][move] == state['board'][next_letter_right + str(num)] and state['board'][move] == state['board'][next_letter_left + str(num)]:
             state['winner'] = True
             print(f"player {state['turn']} wins!")
     else:
         next_letter_left = "b"
-        print(f"left of {letter}: {next_letter_left + str(num)}")
         next_space_left = next_letter_left + str(num)
         if state['board'][move] == state['board'][next_space_left]:
-            next_letter_left = "c"
+            next_letter_left = "a"
             next_space_left = next_letter_left + str(num)
             if state['board'][move] == state['board'][next_space_left]:
                 state['winner'] = True
@@ -78,13 +85,8 @@ def check_win(move):
         if state['board'][move] == (state['board'][next_move_north]) and state['board'][move] == state['board'][next_move_south]:
             state['winner'] = True
             print(f"Player {state['turn']} wins!")
-        else:
-            print("no match")
-    else:
-        print("one of the moves' space might not exist")
     if next_move_north in state['board']: 
         if state['board'][move] == (state['board'][next_move_north]):
-            print("match")
             next_move_north = letter + str(num - 2)
             if next_move_north in state['board']:
                 if state['board'][move] == (state['board'][next_move_north]):
@@ -92,7 +94,6 @@ def check_win(move):
                     print(f"Player {state['turn']} wins!")
     if next_move_south in state['board']: 
         if state['board'][move] == (state['board'][next_move_south]):
-            print("match")
             next_move_south = letter + str(num + 2)
             if next_move_south in state['board']:
                 if state['board'][move] == (state['board'][next_move_south]):
@@ -102,7 +103,9 @@ def check_win(move):
 
 def get_move():
     move = input(f"Player {state['turn']}'s Move (example B2):")
-    if move in state['board']:
+    if move == "quit":
+        state['winner'] = True
+    elif move in state['board'] and state['board'][move] == None:
         state['board'][move] = state['turn']
         check_win(move)
         change_turns()
@@ -126,6 +129,7 @@ def init_game():
     while state['winner'] != True:
         print_board()
         get_move()
-    print('You Win!')
+    print_board()
+    print(f'You Win!')
 
 init_game()
