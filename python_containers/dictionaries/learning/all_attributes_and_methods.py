@@ -59,3 +59,5 @@ print(dir(spaces))
 # print(help(spaces)) # ! WARNING: using the help will cause you to have to terminate your terminal
 
 print(all(space is not None for space in spaces.values()))
+# the all is an efficient way to check the value of all spaces is one thing or another. it returns true or false. it will stop
+# at the first one that presents a false.

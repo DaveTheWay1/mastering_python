@@ -127,9 +127,11 @@ def init_game():
     ''')
 
     while state['winner'] != True:
+        if all(space is not None for space in state['board'].values()) and state['winner'] == False:
+            print("It's a tie")
+            break
         print_board()
         get_move()
     print_board()
-    print(f'You Win!')
 
 init_game()
