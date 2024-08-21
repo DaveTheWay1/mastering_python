@@ -45,3 +45,27 @@ print(sorted_vals)
 # the reverse then being set to true assures that the order is in reverse
 # as stated earlier, the values list must be passed in first because, after a key= parameter;
 # args are not accepted.
+
+from functools import reduce
+
+numbers = [1,2,3,4,5]
+
+# Using reduce to sum the list without initializer
+sum_of_numbers = reduce(lambda acc, x:acc + x, numbers)
+print(sum_of_numbers)
+# output: 15
+# in this case, it starts with the first num as acc and the second num as x.
+# and keeps adding the next num after to the acc
+# 1+2; 3 + 3; 6 + 4; 10 + 5; 15
+
+max_value = reduce(lambda acc, x: acc if acc > x else x, numbers)
+print(max_value)
+# output: 5
+# we go through each num in numbers. 
+# 1,2,3,4,5 and check in each one if one is greater than the other and return the greatest num
+# 1 acc > 2 x ? no, return 2 x
+# 3 acc > 2 x > yes, reutrn 3 acc
+# 4 acc > 3 x ? yes, return 4 acc
+# 5 acc >  4 x ? yes, return 5 acc
+# output: 
+# 5
