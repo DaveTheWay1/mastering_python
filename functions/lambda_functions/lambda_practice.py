@@ -27,3 +27,21 @@ print(sqrs)
 # all that is true gets put into a list
 # output: [2, 4, 6, 8, 10]
 # without the list wrapping you would get: <filter object at 0x10275e020>
+
+values = [(1,"b", "hello"), (2,'a', 'world'), (3, 'c', 'ok')]
+sorted_vals = list(sorted(values, key=lambda x:x[0], reverse=True))
+# Positional argument cannot appear after keyword arguments, therfore it must come first
+print(sorted_vals)
+# with the reverse included; output:
+# [(3, 'c', 'ok'), (2, 'a', 'world'), (1, 'b', 'hello')]
+
+# without the reverse included:
+# [(1, 'b', 'hello'), (2, 'a', 'world'), (3, 'c', 'ok')]
+
+# * the key= parameter is used to specify how to order.
+# in this case, x performs as whats found in each index,
+# the key tells, within that index, which index place of the tuple to then 
+# pay attention to for ordering.
+# the reverse then being set to true assures that the order is in reverse
+# as stated earlier, the values list must be passed in first because, after a key= parameter;
+# args are not accepted.
