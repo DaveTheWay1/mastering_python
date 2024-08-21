@@ -146,3 +146,17 @@
 20. Using dir() on an existing string, dictionary, list, etc.. will tell you all its attributes and methods
 
 21. For an in depth description of all attributes and methods.. you can use the help() function
+
+22. Python is an object-oriented programming (OOP) language.
+        - What are classes used for in OOP?
+                Classes are like "blueprints" and are used to create objects.
+        A key principle of OOP we discussed during the JS Classes lesson is encapsulation…
+        - What's encapsulation?
+                The bundling of related properties (attributes) and methods (behavior) together in an object.
+        - What's an instance method?
+                A method that is callable on an instance of a class, i.e., object
+
+23. self parameter in class init method is only that; a parameter.
+        - this is because, for exmaple, cazador.bark(),,, after creating
+        an object of that class and labing it cazador.. it becomes the first thing
+        passed in which is why/how it simply takes in the space of self. 
