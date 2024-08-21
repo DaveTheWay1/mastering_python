@@ -160,3 +160,7 @@
         - this is because, for exmaple, cazador.bark(),,, after creating
         an object of that class and labing it cazador.. it becomes the first thing
         passed in which is why/how it simply takes in the space of self. 
+
+24. Overriding methods is a thing for class. 
+        - say for example you want a different output on a method that has a default result;
+        you can override it
