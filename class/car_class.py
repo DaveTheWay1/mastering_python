@@ -6,11 +6,11 @@ class Car():
 
   def start(self):
     self.running = True
-    print(self.running)
+    print(f"The {self.make} {self.model} has started.")
     
   def stop(self):
     self.running = False
-    print(self.running)
+    print(f"The {self.make} {self.model} has come to a stop.")
 
   def __str__(self):
     return f"My {self.make} nice. it's a 2.0; not a reguluh"
