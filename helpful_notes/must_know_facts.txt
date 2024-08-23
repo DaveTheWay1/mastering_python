@@ -164,3 +164,12 @@
 24. Overriding methods is a thing for class. 
         - say for example you want a different output on a method that has a default result;
         you can override it
+
+CLASS METHODS
+
+25. The @classmethod decorator
+        - The naming convention of the first parameter is to use cls instead of self
+
+26. class methods are called on the class, not an instance
+        - although class methods can technically be called by instances, it is not considered good practice.
+        Class methods should be called by the class only as good practice and for neatness.
