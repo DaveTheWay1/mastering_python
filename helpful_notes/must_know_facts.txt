@@ -173,3 +173,7 @@ CLASS METHODS
 26. class methods are called on the class, not an instance
         - although class methods can technically be called by instances, it is not considered good practice.
         Class methods should be called by the class only as good practice and for neatness.
+
+27. Inheritance
+        - Using inheritance, a subclass automatically inherits all of the attributes and methods of its superclass.
+        - The subclass can then define additional attributes and/or methods to make a more specialized class than the superclass.
