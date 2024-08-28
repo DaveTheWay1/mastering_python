@@ -177,3 +177,48 @@ CLASS METHODS
 27. Inheritance
         - Using inheritance, a subclass automatically inherits all of the attributes and methods of its superclass.
         - The subclass can then define additional attributes and/or methods to make a more specialized class than the superclass.
+
+28. Databases 
+        Different Types of Databases
+        - Most database technologies can be broken down into two main categories:
+                - Relational databases
+                - NoSQL databases
+
+29. Schema
+        The structure of a particular database is defined by its schema.
+        Schemas define the database’s:
+                Tables, including the number and data type of each column
+                Indexes for efficient access of data
+                Constraints (rules, such as whether a field can be null or not)
+
+30. Tables
+        The primary container for data in a relational database is a table
+                col   col      col       col      col
+        row        id | color | texture | size | customer_id
+                -----------------------------------------
+        row        1  | blue  | solid   | large| 4
+                -----------------------------------------
+        row        2  | red   | solid   | small| 2
+
+        A single table in a relational database holds data for a particular data resource, 
+        for example, customers, orders, reviews, etc.
+
+31. Rows (Records)
+        A row in a table represents a single instance of the data entity.
+        For example a particular artist in the artists table.
+
+32. Columns (Fields)
+        The columns of a table have a:
+                Name
+                Data type (all data in a column must be of the same type)
+                Optional constraints
+        
+        Common constraints for a column include:
+        PRIMARY KEY: column, or group of columns, uniquely identify a row
+        REFERENCES (Foreign Key): value in column must match the primary key in another table
+        NOT NULL: column must have a value, it cannot be empty (null)
+        UNIQUE: data in this column must be unique among all rows in the table
+
+33. A primary key uniquely identifies a row within a table
+
+34. A foreign key references the primary key of a related table.
