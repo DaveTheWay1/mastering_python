@@ -10,7 +10,12 @@ nums = [1,2,3,4,5]
 solution = Solution()
 solution.twoSum(nums, 4)
 
-
+# output:
+# i: 1, j:1
+# i: 2, j:2
+# i: 3, j:3
+# i: 4, j:4
+# i: 5, j:5
 
 # * RANKED AS: EASY
 
