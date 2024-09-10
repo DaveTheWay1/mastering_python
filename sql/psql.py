@@ -237,3 +237,13 @@
 
 # !!!!! CASCADE, WE AVOID IT BECAUSE IT IS CONSIDERED BAD PRACTICE!!!!!!
 # why? bc you always want to have full control of your data and know what exactly you are deleting
+
+
+# (1) A relational database contains a _________ for each data entity/resource that an application has.
+# table
+# (2) True or False: In a relational database, all of the data in a particular column in a table must be of the same data type.
+# True
+# (3) A single instance of a data entity, e.g., Band, is represented by a ______ in a table.
+# row
+# (4) _____ is the "programming" language used by relational databases.
+# Structured Query Language (SQL)
