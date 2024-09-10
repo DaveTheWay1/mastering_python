@@ -186,3 +186,54 @@
 # As much fun as it is to write SQL, most developers don’t have many opportunities to do so because 
 # they typically software known as an Object Relational Mapper (ORM) to automatically write SQL and 
 # communicate with the database server.
+
+# ? What happens if you get an error like in the below? 
+# music=# DELETE FROM bands WHERE name LIKE '%Smiths%';
+# ERROR:  update or delete on table "bands" violates foreign key 
+# constraint "musicians_band_id_fkey" on table "musicians"
+# DETAIL:  Key (id)=(1) is still referenced from table "musicians".
+
+# * WHEN YOU TRY TO DELETE WHEN THERE IS AN ACTIVE FOREIGN KEY CONSTRAINT
+# you have 2 options:
+# you either delete the the row from the other table causing the restraint 
+# OR
+# We can update the 
+
+# * EXAMPLE
+# SELECT * FROM musicians LEFT JOIN bands on musicians.band_id = bands.id; 
+#  id |    name    |                     quote                      | band_id | id |    name    |   genre   
+# ----+------------+------------------------------------------------+---------+----+------------+-----------
+#   3 | Neil Peart | If you've got a problem, take it out on a drum |       2 |  2 | Rush       | prog rock
+#   6 | Mow        | I got the Meowies                              |       2 |  2 | Rush       | prog rock
+#   2 | Geddy Lee  | I love to write, it's my first love.           |       1 |  1 | The Smiths | 
+# (3 rows)
+
+# DELETE FROM musicians WHERE name LIKE '%Geddy%';
+# DELETE 1
+
+# SELECT * FROM musicians;
+#  id |    name    |                     quote                      | band_id 
+# ----+------------+------------------------------------------------+---------
+#   3 | Neil Peart | If you've got a problem, take it out on a drum |       2
+#   6 | Mow        | I got the Meowies                              |       2
+# (2 rows)
+
+# SELECT * FROM bands LEFT JOIN musicians ON bands.id = musicians.band_id;
+#  id |    name    |   genre   | id |    name    |                     quote                      | band_id 
+# ----+------------+-----------+----+------------+------------------------------------------------+---------
+#   2 | Rush       | prog rock |  3 | Neil Peart | If you've got a problem, take it out on a drum |       2
+#   2 | Rush       | prog rock |  6 | Mow        | I got the Meowies                              |       2
+#   1 | The Smiths |           |    |            |                                                |        
+# (3 rows)
+
+# DELETE FROM bands WHERE name LIKE '%Smiths%';
+# DELETE 1
+# music=# SELECT * FROM bands;
+#  id | name |   genre   
+# ----+------+-----------
+#   2 | Rush | prog rock
+# (1 row)
+
+
+# !!!!! CASCADE, WE AVOID IT BECAUSE IT IS CONSIDERED BAD PRACTICE!!!!!!
+# why? bc you always want to have full control of your data and know what exactly you are deleting
