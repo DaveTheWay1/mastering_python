@@ -1,3 +1,5 @@
+
+# * SPLIT METHOD
 print("using split on a sentence found within a string")
 print("ace of spades".split(" "))
 # output: ['ace', 'of', 'spades']
@@ -16,9 +18,18 @@ print(list("abcd"))
 # * the above demonstrates how to list all letters in a single worded string
 print(" ")
 
+# * INDEX METHOD
 # Warning: Raises error if substring not found
 # "tesla".index("s")
 # => 2
+
+print("david it is".index("is"))
+# output:9 
+# if it is a word, it will find the index of where that word first starts
+# ! this will only locate the index of the first instance, not all instances.
+print("david it is".index("s"))
+# output: 10
+print(" ")
 
 # Like index, but returns -1 if substring not found
 # "tesla".find("x")
