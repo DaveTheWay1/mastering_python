@@ -29,11 +29,22 @@ print("david it is".index("is"))
 # ! this will only locate the index of the first instance, not all instances.
 print("david it is".index("s"))
 # output: 10
+
+# print("david it is".index("x"))
+# output:
+# ! ValueError: substring not found
 print(" ")
 
 # Like index, but returns -1 if substring not found
 # "tesla".find("x")
 # => -1
+print("david it is".find("is"))
+# output: 9
+print("david it is".find("x"))
+# output: -1
+
+# * the difference here is that UNLIKE index method, find method will prevent an error and give you -1 instead of the error
+# if the searched value is not found
 
 # "foo".upper()
 # => "FOO"
