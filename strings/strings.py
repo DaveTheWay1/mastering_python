@@ -53,7 +53,10 @@ print( last_letter )
 
 s = 'Hello'
 # I like Jello!
-s[0] = 'J'
+# s[0] = 'J'
 # Traceback (most recent call last):
 #   File "<stdin>", line 1, in <module>
 # TypeError: 'str' object does not support item assignment
+
+print(s.replace('H', "J"))
+# output: Jello
