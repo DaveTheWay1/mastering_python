@@ -7,11 +7,14 @@ print(sentence.split())
 print(" the above lists all words in a sentence by using split. ")
 print(" ")
 
-# However, this won't work as desired
-# "abcd".split("")
+# ? how would we split all the letters in a word?
+# print("abcd".split(""))
+# ! but that wouldnt work. we'd get an error: ValueError: empty separator
 # Instead, use the list() function like this:
-# list("abcd")
-# => ['a', 'b', 'c', 'd']
+print(list("abcd"))
+# output: ['a', 'b', 'c', 'd']
+# * the above demonstrates how to list all letters in a single worded string
+print(" ")
 
 # Warning: Raises error if substring not found
 # "tesla".index("s")
