@@ -5,7 +5,7 @@ student['age'] = 21
 
 # * Deleting Items
 # The del statement is used to delete an item from a dictionary:
-
+print(student)
 del student['age']
 # Verify that item was deleted
 print('age' in student)
