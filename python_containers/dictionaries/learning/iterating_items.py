@@ -45,7 +45,5 @@ print(stats)
 for key,value in stats.items():
   if key == 'security_clearence' and value == True:
     print(f"{key}: {value} - clearnece level: {stats['clearence_level']}")
-  elif(key == 'clearence_level'):
-    continue
   else:
     print(f"{key}: {value}")
