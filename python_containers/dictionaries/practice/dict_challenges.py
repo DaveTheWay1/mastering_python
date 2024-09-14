@@ -52,3 +52,19 @@ dict1.update(dict2)
 print(dict1)
 # output:
 # {'Ten': 10, 'Twenty': 20, 'Thirty': 30, 'Fourty': 40, 'Fifty': 50}
+
+# ? Exercise 3: Print the value of key ‘history’ from the below dict
+
+sampleDict = {
+    "class": {
+        "student": {
+            "name": "Mike",
+            "marks": {
+                "physics": 70,
+                "history": 80
+            }
+        }
+    }
+}
+
+print(sampleDict['class']['student']['marks']["history"])
