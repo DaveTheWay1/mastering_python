@@ -27,3 +27,15 @@ res_dict = dict(zip(keys, values))
 print(res_dict)
 # zip immediately takes two iterables like the above and turns them into tuples
 # by applying dict like so - it behaves like a converter of the result turning them all into a dict
+
+# another given solution:
+# empty dictionary
+res_dict = dict()
+
+for i in range(len(keys)):
+    res_dict.update({keys[i]: values[i]})
+print(res_dict)
+
+# {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+# {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+# {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
