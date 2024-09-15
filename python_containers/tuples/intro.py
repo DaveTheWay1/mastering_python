@@ -1,5 +1,6 @@
 
 # * Tuples
+# ! COMMAS create the tuples, NOT the parenthesis
 # Tuples in Python are very similar to Python lists.
 # Tuples have a class (type) of tuple.
 
