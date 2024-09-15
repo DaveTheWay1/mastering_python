@@ -46,3 +46,11 @@ print(" ")
 # 7
 # 8
 # 9
+
+# * BASIC SYNTAX
+
+# [<expression> for <item> in <list>]
+# This reads as: I want <expression> for each <item> in <list>
+# one expression, one for loop, and one if conditional statement
+
+# !!!! LIST COMPREHENSIONS ARE USED TO CREATE A NEW LIST
