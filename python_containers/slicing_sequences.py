@@ -39,3 +39,9 @@ chars = ['a', 'b', 'x', 'y', 'd']
 chars[2:4] = 'c'
 print(chars)
 # > ['a', 'b', 'c', 'd']
+
+chars = ['a', 'b', 'x', 'y', 'd']
+by_2 = chars[::2]
+print(by_2)
+# ['a', 'x', 'd']
+# * we can skip the start and end and go straight to what we want to count by
