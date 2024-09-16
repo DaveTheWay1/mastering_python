@@ -34,7 +34,7 @@ def compute(a,b,op):
 # ! we do not add parenthesis when we pass the function
 # as an arguement. # ! this is because we dont want to CALL
 # the function as soon as we pass it in. 
-# line 31's paranthessis are the calling parenthesis. 
+# line 33's paranthessis are the calling parenthesis. 
 # think of add and op, those "words" for our understanding,
 # as simply being  replaced.
 print(compute(3,3,add))
