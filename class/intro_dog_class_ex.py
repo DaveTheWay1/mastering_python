@@ -10,11 +10,18 @@ class Dog():
     def bark(self):
         print(f"{self.name} says woof!")
 
+    def dogs_age(self):
+        print(f"{self.name} is {self.age} years old")
+
 cazador = Dog("Cazador", 7)
 print(cazador)
-# <__main__.Dog object at 0x100c29e80>
+# <__main__.Dog object at 0x100c29e80> the last few numbers and letters that follow is a memory location.
 print(cazador.name, cazador.age)
 # output: Cazador 7
 cazador.bark()
 # output:
 # Cazador says woof!
+
+cazador.dogs_age()
+# output:
+# Cazador is 7 years old
