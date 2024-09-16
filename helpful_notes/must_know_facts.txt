@@ -143,7 +143,7 @@
             print(dev_skills('Alex', 'HTML', 'CSS', 'JavaScript', 'Python'))
             # -> {'name': 'Alex', 'skills': ['HTML', 'CSS', 'JavaScript', 'Python']}
 
-20. Using dir() on an existing string, dictionary, list, etc.. will tell you all its attributes and methods
+20. ******* Using dir() on an existing string, dictionary, list, etc.. will tell you all its attributes and methods
 
 21. For an in depth description of all attributes and methods.. you can use the help() function
 
