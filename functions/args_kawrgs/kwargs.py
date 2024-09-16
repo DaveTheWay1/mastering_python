@@ -24,8 +24,20 @@ print(divide(b=25, a=100)) # returns '100 divided by 25 is 4.0'
 # list, we can access any number of keyword arguments.
 # * For example:
 def dev_skills(dev_name, **kwargs):
-#   kwargs will be a dictionary!
+# ! kwargs will be a dictionary!
     dev = {'name': dev_name, 'skills': kwargs}
     return dev
 print(dev_skills('Jackie', HTML=5, CSS=3, JavaScript=4, Python=2))
 # {'name': 'Jackie', 'skills': {'HTML': 5, 'CSS': 3, 'JavaScript': 4, 'Python': 2}}
+
+
+# *args gives us a TUPLE. **kwargs gives us a DICTIONARY
+
+def test(**kwargs):
+  print(kwargs)
+  if "Name" in kwargs:
+    print(kwargs["Name"])
+
+test(Name = "David", Age = 25, num_of_pets = 3)
+# {'Name': 'David', 'Age': 25, 'num_of_pets': 3}
+# David
