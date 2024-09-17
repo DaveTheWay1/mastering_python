@@ -1,0 +1,12 @@
+HOW TO INSTALL:
+cd ~/Downloads
+python3 -m venv pygame_install
+source pygame_install/bin/activate
+pip install pygame
+
+HOW TO ACTIVATE:
+cd ~/Downloads
+source pygame_install/bin/activate
+
+HOW TO EXIT:
+exit()
