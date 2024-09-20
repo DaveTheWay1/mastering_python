@@ -1,0 +1,9 @@
+!! Distinguishing Between Attributes and Entities !!
+    
+If you answer “yes” to either of the following questions, the attribute is 
+likely a candidate to be an entity instead:
+
+Would the attribute likely have attributes of its own?
+Could the attribute be in common with other entities? For example, 
+a Customer for a Ticket is also likely to be common to other 
+entities like Order, MarketingCampaign, Review, etc.

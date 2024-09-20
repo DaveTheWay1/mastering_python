@@ -1,0 +1,61 @@
+Designing an Entity Relationship Diagram (ERD)
+
+SAMPLE APPLICATION:
+
+ERD for a Concert Ticket Tracking application
+
+The application should track:
+- The tickets for a concert
+- The seat and price of the ticket
+- The customer that bought a ticket
+- The date of the concert
+- The performer(s) of the concert
+- The venue of the concert
+
+The Process
+Reviewing an application’s user stories is a good 
+first step to creating the conceptual data model.
+
+To design a basic ERD, we must identify 
+three different components:
+1. The data entities
+2. The attributes (the data properties of an entity)
+3. The relationships between the entities
+
+et’s start with a preliminary Ticket entity…
+
+The Ticket Entity
+
+our first attempt at modeling the Ticket entity 
+by including all the attributes you might see 
+printed on a ticket:
+
+    Ticket
+    seat
+    price
+    event_date
+    performer
+    venue
+    customer_name
+
+    in a database, it might look like:
+
+    tickets(database table)
+    id      seat            price   event_date  performer   venue       customer_name
+    1024    Row A Seat 25   250.0   12/14/2018  Alice       Microsoft   David
+    another row with consistent data types 
+    another row with consistent data types
+    another row with consistent data types
+
+    !!!!  However, several of the attributes in our first attempt are actually 
+    better defined as entities instead !!!!!!
+
+    !! Distinguishing Between Attributes and Entities !!
+    
+    If you answer “yes” to either of the following questions, the attribute is 
+    likely a candidate to be an entity instead:
+
+    Would the attribute likely have attributes of its own?
+    Could the attribute be in common with other entities? For example, 
+    a Customer for a Ticket is also likely to be common to other 
+    entities like Order, MarketingCampaign, Review, etc.
