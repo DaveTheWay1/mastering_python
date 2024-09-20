@@ -1,0 +1,14 @@
+Intro to Data Modeling
+
+An important part of the planning process for an 
+application is determining the data persistence 
+needs of that application.
+
+This planning results in a *** DATA MODEL.
+
+*** The DATA MODEL is conceptual and is used as a 
+blueprint for implementing the data persistence needs 
+within a given database technology (SQL, NoSQL, etc.).
+
+The data model is typically visualized with 
+an *** ENTITY RELATIONSHIP DIAGRAM (ERD).
