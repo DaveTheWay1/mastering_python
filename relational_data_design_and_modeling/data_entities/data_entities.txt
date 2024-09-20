@@ -1,0 +1,10 @@
+DATA ENTITIES
+
+What is a Data Entity?
+
+*** A DATA ENTITY, or just entity, is used to conceptually model 
+(represent) a real-world object within an application.
+
+EXAMPLES: Examples: User, Post, Comment, Order, Product, etc.
+
+Each entity type will have one or more attributes…

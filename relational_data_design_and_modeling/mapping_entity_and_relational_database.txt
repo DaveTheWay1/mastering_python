@@ -1,0 +1,10 @@
+Mapping Between an Entity and a Relational Database
+
+Remember, the conceptual data model is used as a blueprint 
+for how the actual database will be structured.
+
+Each entity in a data model identifies a table in 
+a relational database. For example, a Book entity will 
+result in a books table in the database.
+
+Each row in the table would represent an instance of the entity.

@@ -1,0 +1,8 @@
+The Attributes for a Data Entity
+
+*** Attributes represent an entity’s data. 
+For example, a Book entity would probably have a 
+title attribute.
+
+Each attribute has a *** DATA TYPE 
+For example, string, numeric, datetime
