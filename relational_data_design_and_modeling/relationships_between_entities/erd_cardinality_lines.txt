@@ -1,0 +1,25 @@
+ERD Cardinality Lines
+
+In an ERD, lines drawn between 
+entities describe the cardinality 
+between those entities as follows:
+
+--|----|-- ONE-TO-ONE
+
+--|----|<- ONE-TO-MANY
+
+->-----<-  MANY-TO-MANY
+
+
+Note that these are the three main types 
+of cardinality. There are more specific 
+versions of these, such as zero or many:
+
+--------O--         ----------------<-
+Zero or one         many
+
+--------|-          --------------|-|-
+One                 One and Only One
+
+-------O<-          --------------|<-
+Zero or many        One or many

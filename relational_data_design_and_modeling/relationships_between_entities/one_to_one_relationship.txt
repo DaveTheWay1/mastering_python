@@ -1,0 +1,17 @@
+One-To-One Relationship
+
+A one-to-one relationship exists when one row in a table 
+relates to a single row in another table.
+
+1:1 relationships are not as common as 1:M and M:M
+
+For example:
+
+A business has one mailing address and vice-versa:
+
+Mailing             business
+id                  id
+street              name
+city         -----|- mailling_address_id(FK)
+state        |  
+zip -|--------

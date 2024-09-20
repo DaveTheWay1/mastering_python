@@ -1,0 +1,10 @@
+Relationships Between Entities
+Data entities often have a relationship with one or more other entities.
+
+Relationships determine how the entities are related in terms of their cardinality.
+
+There are three main types of cardinality:
+
+one-to-one (1:1)
+one-to-many (1:M)
+many-to-many (M:M)
