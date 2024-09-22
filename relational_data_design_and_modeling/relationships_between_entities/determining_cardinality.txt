@@ -1,1 +1,61 @@
 Determining the Cardinality Between Entities
+
+We can usually determine whether the relationship 
+between two entities is one-to-many or many-to-many 
+by thinking about the relationship in both directions.
+
+For example, let’s identify the relationship between the 
+Concert and Ticket entities:
+
+Can/does a single concert have/belong to more 
+than one ticket? (Answer: Yes)
+Can/does a single ticket have/belong to 
+more than one concert? (Answer: No)
+
+** Therefore the relationship would be
+Concert --< Ticket (one-to-many)
+
+Which of the two tables would have to 
+contain the Foreign Key (FK)?
+- The **tickets** table - the "belongs to"/child 
+entity will always have the FK.
+
+what kind of cardinality relationship would
+exist between Customer and Ticket?
+- `Customer --< Ticket` (one-to-many)
+
+Seems like there should also be a relationship between 
+the Customer and Concert entities…
+- Thanks to the way relational databases are designed, 
+you can access other tables that are not directly joined by joining with others that are.
+
+For example, you most certainly could access all of the concerts attended by a 
+customer by joining through tickets:
+Customer --< Ticket >-- Concert
+
+Although not shown on the ERD with a connecting 
+line, you could say that
+“A Customer has many Concerts through Tickets”, 
+as well as,
+“A Concert has many Customers through Tickets”.
+
+How would you identify the relationship between Concert
+and Venue, and Concert and Performer? 
+`Venue --< Concert`
+`Concert >--< Performer`
+
+Modeling data is an important step during the planning for a project because data is the single 
+source of truth of any application.
+
+Knowledge Test:
+
+1. True or False: Each Data Entity has its own table in a Relational Database?
+**True**
+
+2. What would be the relationship between Orders & Products in an eCommerce application?
+**`Order >--< Product`**
+
+3. In this relationship:
+Customer ---< Order
+which entity (table) would have the Foreign Key?
+The **Order** entity (**orders** table)
