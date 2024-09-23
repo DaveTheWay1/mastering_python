@@ -1,0 +1,20 @@
+
+Algorithms can be defined as:
+The current term of choice for a problem-solving  
+procedure... It is commonly used nowadays for the set
+of rules a machine (...especially a computer) follows
+to achieve a particular goals.
+
+Algorithms are often paired with words specifying
+the activity for which a set of rules have been
+design.
+
+A SEARCH ALGORITHM:
+is, for example, a procedure that determines
+what kind of information is retrieved from a 
+large mass of data.
+
+An ECRYPTION ALGORITHM:
+is a set of rules by which information or messages
+are encoded so that unauthorized persons cannot
+read them.
