@@ -82,6 +82,7 @@ print(recur_factorial(5))
 # finish can finally finish. 
 
 # ? what is happening ?
-# in other words, 5 cant finish until 4 does, and 4 cant until 3,
-# then 2, and then 1, and when 1 finally finishes, 
+# in other words, the loop continues until n = 1. 
+# once n finally equals 1, it goes back up to complete 
+# all instances it didnt complete to get n to equal to 1.
 # 2 can finish, and then 3, and then 4, and then 5
