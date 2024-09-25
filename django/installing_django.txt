@@ -1,0 +1,51 @@
+It is recommaneded to not create a virtual env globally and to do the following 
+steps per project
+
+more to be added to this file regarding why. Overall important note, it does not take
+an excessive amount of space to repeat these steps per project
+
+cd /path/to/your/new/project  # Navigate to your project directory
+python3 -m venv env           # Create the virtual environment
+source env/bin/activate        # Activate it
+pip install Django             # Install Django
+
+GitIgnore. Typically, GitIgnore should contain these
+
+# Virtual Environment
+env/
+
+# Python Bytecode
+__pycache__/
+*.pyc
+
+# Django specific files
+*.log
+db.sqlite3
+
+# Environment variables
+.env
+
+# IDE and editor config files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Static files
+staticfiles/
+
+By default, Django uses a lightweight database called SQLite. However, 
+SQLite is not appropriate for production use because it’s considered 
+not to be scalable (for example, only one user/request can access the 
+database at a time).
+
+Therefore, from the start we’ll be following the better practice of using a 
+more capable database by configuring each of our Django projects to work 
+with PostgreSQL.
+
+To use PostgreSQL, we need to do a one-time install of the psycopg2 Python 
+package:
+pip3 install psycopg2-binary
+
+psycopg2 is a popular library that enables Python applications to interface 
+with PostgreSQL.
