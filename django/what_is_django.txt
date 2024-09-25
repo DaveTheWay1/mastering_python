@@ -1,0 +1,15 @@
+What IS Django?
+Django is one of the most popular PYTHON BASED
+WEB FRAMEWORK and its popularity continues to grow
+
+What is Django USED FOR?
+It’s designed for the RAPID DEVELOPEMENT of 
+HIGHLY SECURE web applications
+
+What does Django PROVIDE?
+- A powerful Object-Relational-Mapper (ORM) for 
+working with relational databases using 
+Python code instead of SQL.
+- A built-in admin app for browsing and manipulating 
+data in the database.
+- Built-in user management and authentication.
