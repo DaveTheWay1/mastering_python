@@ -1,0 +1,44 @@
+Models View Templates
+
+             USER
+              |
+             VIEW
+        request/response
+        /               \
+DB  <-->  MODEL           TEMPLATE
+                        html/css/forms
+
+This chart compares MVC to Django’s MVT:
+
+                                   Django
+Concern	                    MVC	    MVT
+
+Database access	            Model	Model
+Code mapped to routes	 Controller	View
+Rendering of dynamic HTML	View	Template
+
+When developing with Django, we’ll just have to 
+be careful to say:
+
+view - instead of controller
+template - instead of view
+
+The fundamental difference between MVT and MVC 
+- other than nomenclature - is that:
+
+In Django many of the responsibilities a controller 
+would normally perform are picked up in some way by 
+the framework itself.
+
+MVC and MVT are all related to the MV* family of 
+design patterns. These patterns emphasize separating 
+presentation concerns(UI), application processing 
+concerns, and data management concerns. They also 
+have a wide variety of acronyms and are usually 
+only differentiated by small details and marginal 
+philosophical differences between framework 
+developers. Some common MV* patterns are 
+MVC(model, view, controller), MVVM(model, 
+view, view model), MPV(model, view, presenter) 
+and many others. MVT is just another one of 
+the many patterns modeled after MV*.
