@@ -1,0 +1,31 @@
+Django’s Routing Methodology
+
+---------------------------------Python-------------------------------------------|
+       |-------------------Django Framework---------------------------------------|
+       |                        -----Django Project ---------------------------|  |
+       |                        |             |----------Django App-------|    |  |
+BROWSER|----Get Page Reqhest----> urls.py ----|-> urls.py --> VIEW Layer  |    |  |
+     \ |                        |             |               (views.py)  |    |  |
+       \                        |             |           /        |      |    |  |
+       |HTML                    |             |         /          |      |    |  |
+       |  \                     |             |       /            |      |    |  |
+       |   \                    |             |     /              |      |    |  |
+       |      Template    <-----------------------/                |      |    |  |
+       |       Layer            |             |                           |    |  |
+                                |             |             Model Layer   |    |  |
+                                |             |                        <--|----|--|-> Database
+                                |             |             (models.py)   |    |  |
+                                |             |                           |    |  |
+                                |             |----------------------------    |  |
+
+
+Web frameworks such as Express and Ruby on Rails, 
+use both the HTTP verb & URL to define routes 
+used to map requests to controller actions.
+
+Other frameworks, such as Django and ASP.NET Core, 
+use just the URL when defining a route, 
+ignoring the HTTP verb.
+
+That’s why the Python modules used to define 
+routes in Django are named urls.py (see diagram above).
