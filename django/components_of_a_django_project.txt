@@ -1,0 +1,29 @@
+Components of a Django Project
+---------------------------------Python-------------------------------------------|
+       |-------------------Django Framework---------------------------------------|
+       |                        -----Django Project ---------------------------|  |
+       |                        |             |----------Django App-------|    |  |
+BROWSER|----Get Page Reqhest----> urls.py ----|-> urls.py --> VIEW Layer  |    |  |
+     \ |                        |             |               (views.py)  |    |  |
+       \                        |             |           /        |      |    |  |
+       |HTML                    |             |         /          |      |    |  |
+       |  \                     |             |       /            |      |    |  |
+       |   \                    |             |     /              |      |    |  |
+       |      Template    <-----------------------/                |      |    |  |
+       |       Layer            |             |                           |    |  |
+                                |             |             Model Layer   |    |  |
+                                |             |                        <--|----|--|-> Database
+                                |             |             (models.py)   |    |  |
+                                |             |                           |    |  |
+                                |             |----------------------------    |  |
+
+The quirky thing about Django is how it names 
+its high-level components.
+
+What we think of as a web application, 
+Django calls a project.
+
+Furthermore, what we think of as part of an app’s 
+functionality (or modules), Django refers to as apps.
+
+A Django project can have many apps, and a Django app can belong to multiple projects.
