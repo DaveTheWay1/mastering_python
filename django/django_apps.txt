@@ -1,0 +1,28 @@
+A Django project contains Django APPS.
+
+Django apps REPRESENT major FUNCTIONALITY in a project, 
+although you would typically create only a SINGLE app within the project.
+
+Take a look at the INSTALLED_APPS list in project_name_here/settings.py. 
+Those PRE-INSTALLED apps PROVIDE services such as the ADMIN app and 
+the ability to serve STATIC FILES.
+
+When creating a django project, youll need to an app to implement the main
+FUNCTIONALITY.
+typically, these apps are named main_app. They are created using the command:
+python3 manage.py startapp main_app
+!! within your django project
+
+after creating the main_app folder, you should include it within your installed 
+apps like so:
+INSTALLED_APPS = [
+	'main_app',
+	'django.contrib.admin',
+	'django.contrib.auth',
+	'django.contrib.contenttypes',
+	'django.contrib.sessions',
+	'django.contrib.messages',
+	'django.contrib.staticfiles',
+]
+
+!!! DO NOT FORGET THE COMMA AFTER INCLUDING MAIN_APP !!!
