@@ -1,0 +1,44 @@
+Components of a Django Project
+---------------------------------Python-------------------------------------------|
+       |-------------------Django Framework---------------------------------------|
+       |                        -----Django Project ---------------------------|  |
+       |                        |             |----------Django App-------|    |  |
+BROWSER|----Get Page Reqhest----> urls.py ----|-> urls.py --> VIEW Layer  |    |  |
+     \ |                        |             |               (views.py)  |    |  |
+       \                        |             |           /        |      |    |  |
+       |HTML                    |             |         /          |      |    |  |
+       |  \                     |             |       /            |      |    |  |
+       |   \                    |             |     /              |      |    |  |
+       |      Template    <-----------------------/                |      |    |  |
+       |       Layer            |             |                           |    |  |
+                                |             |             Model Layer   |    |  |
+                                |             |                        <--|----|--|-> Database
+                                |             |             (models.py)   |    |  |
+                                |             |                           |    |  |
+                                |             |----------------------------    |  |
+
+
+
+1. create your .gitignore file.
+
+2. create your virtual enviroment within your project folder 
+per the recommaneded good practice:
+python3 -m venv env 
+
+3. Active the virtual enviroment:
+source env/bin/activate
+
+step 4. install django:
+pip install Django
+
+step 5. upgrade pip in terminal as needed:
+python3 -m pip install -–upgrade pip
+
+step 6. using postgres SQL, create the database:
+    1. psql postgres
+    2. CREATE DATABASE database_name_here;
+
+step 7. create the django project:
+django-admin startproject project_name_here(usually the same name as database)
+
+step 8. cd into django project
