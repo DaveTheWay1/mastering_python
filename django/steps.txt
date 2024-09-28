@@ -63,3 +63,20 @@ INSTALLED_APPS = [
 
 step 11. after a succesful inclusion, you can test to see if the project starts up:
 python3 manage.py runserver
+
+step 12. Connecting to the Database
+Earlier we created a dedicated catcollector PostgreSQL database.
+A Django project’s configuration lives in settings.py. 
+Let’s update it to use our catcollector database like in the below:
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'created_database_name_here',
+        # 'HOST': 'localhost',  <-- some computers might need this line
+    }
+}
+
+** if at this point you get an error: ModuleNotFoundError: No module named 'psycopg2'
+Install psycopg2: pip3 install psycopg2
+refer to psycopg2.txt file for more information
