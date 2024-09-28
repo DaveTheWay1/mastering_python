@@ -80,3 +80,9 @@ DATABASES = {
 ** if at this point you get an error: ModuleNotFoundError: No module named 'psycopg2'
 Install psycopg2: pip3 install psycopg2
 refer to psycopg2.txt file for more information
+
+step 13. Migrate the Pending Migrations:
+python3 manage.py migrate
+
+We use migrations to update the database’s schema 
+over time to meet the project’s needs.
