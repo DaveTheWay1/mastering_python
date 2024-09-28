@@ -1,0 +1,28 @@
+psycopg2
+
+
+having POSTGRESQL installed on your system and installing PSYCOPG2 
+are two DIFFERENT things:
+
+1. PostgreSQL (Database Server):
+PostgreSQL is the DATABASE SERVER itself. It's the software that MANAGES DATABASES and HANDLES REQUESTS from clients 
+(such as Django) to PERFORM OPERATIONS like CREATING, READING, UPDATING, OR DELIVERING DATA.
+You interact with PostgreSQL via tools like psql, pgAdmin, or through your application (in this case, Django).
+When you installed PostgreSQL, you likely installed the server itself along with the necessary management tools.
+
+2. psycopg2 (Python Adapter):
+psycopg2 is a PYTHON PACKAGE that allows your Django application to COMMUNICATE with the PostgreSQL server. 
+It acts as a BRIDGE between Python code (Django) and PostgreSQL.
+Even though PostgreSQL is installed on your system, Django needs psycopg2 to TRANSLATE the PYTHON CODE into SQL QUERIES and 
+send them to the PostgreSQL server.
+
+Why You Need psycopg2:
+Django INTERACTS with databases using Database ADAPTERS.
+For PostgreSQL, psycopg2 is the MOST COMMON and widely used ADAPTERthat Django relies on to INTERACT with the PostgreSQL database.
+WITHOUT psycopg2, your Django project won't be able to connect to the PostgreSQL database, even though PostgreSQL is installed and running.
+
+Summary:
+PostgreSQL is the actual database server.
+psycopg2 is the Python library that allows Django to talk to PostgreSQL.
+So, you’ll still need to install psycopg2 in your Python environment to let Django communicate with your already-installed PostgreSQL server.
+
