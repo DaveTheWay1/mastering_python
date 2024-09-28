@@ -32,7 +32,9 @@ step 4. install django:
 pip install Django
 
 step 5. upgrade pip in terminal as needed:
-python3 -m pip install -–upgrade pip
+python3 -m pip install -–upgrade pip 
+OR MAYBE DONT. may cause an issue  and not find DJANGO if that becomes the case:
+python3 -m pip install Django
 
 step 6. using postgres SQL, create the database:
     1. psql postgres
@@ -42,3 +44,22 @@ step 7. create the django project:
 django-admin startproject project_name_here(usually the same name as database)
 
 step 8. cd into django project
+
+step 9. within your django project, create your main app:
+python3 manage.py startapp main_app
+
+step 10. include migrations from the main app into the git ignore folder
+
+step 10. include the main app you created into the INSTALLED APPS like so:
+INSTALLED_APPS = [
+	'main_app',
+	'django.contrib.admin',
+	'django.contrib.auth',
+	'django.contrib.contenttypes',
+	'django.contrib.sessions',
+	'django.contrib.messages',
+	'django.contrib.staticfiles',
+]
+
+step 11. after a succesful inclusion, you can test to see if the project starts up:
+python3 manage.py runserver
