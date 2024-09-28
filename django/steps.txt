@@ -103,3 +103,20 @@ from django.contrib import admin
      path('', include('main_app.urls')),
  ]
 Be sure to import the include function near the top.
+
+step 16. add the boiler plate needed in main_app/urls.py
+from django.urls import path
+ from . import views
+	
+ urlpatterns = [
+	
+ ]
+ We’ve imported the path function that will be used to define each route.
+
+ step 17. Define main_app’s Home Page URL like in the below:
+ 
+ In main_app/urls.py:
+
+urlpatterns = [
+  path('', views.home, name='home'),
+]
