@@ -1,0 +1,13 @@
+Defining Routes (URLs)
+
+Just like with Express, there needs to be a route defined that 
+matches each HTTP request coming from the browser.
+
+when there is no route defined that matches a given HTTP request
+we get the error: 404 Not Found
+
+But, let’s not forget that Django’s routing system only cares 
+about the URL (path) of the request and ignores the HTTP method.
+
+For the HOME page functionality, we’ll use the root 
+route (http://localhost:8000)
