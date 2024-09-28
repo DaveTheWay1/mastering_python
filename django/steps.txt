@@ -86,3 +86,20 @@ python3 manage.py migrate
 
 We use migrations to update the database’s schema 
 over time to meet the project’s needs.
+
+step 14. In the main_app, create the urls.py module:
+touch main_app/urls.py
+
+step 15. Include it in the project, project_name/urls.py
+like in the below:
+
+from django.contrib import admin
+
+ from django.urls import path, include
+	
+ urlpatterns = [
+     path('admin/', admin.site.urls),
+     # '' represents the "starts with" path
+     path('', include('main_app.urls')),
+ ]
+Be sure to import the include function near the top.
