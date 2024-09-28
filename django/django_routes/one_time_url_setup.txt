@@ -1,0 +1,60 @@
+One-time URL Setup
+In Django, routes are defined within modules named urls.py.
+
+In an existing project, there is a project_name/urls.py that we 
+could add additional routes to, but it’s a best practice for 
+each Django app to define its own and include those 
+URLs in the project’s.
+
+Start by setting up main_app’s own urls.py module:
+touch main_app/urls.py
+
+Include it in the project’s project_name/urls.py:
+
+from django.contrib import admin
+ # Add the include function to the import
+ from django.urls import path, include
+	
+ urlpatterns = [
+     path('admin/', admin.site.urls),
+     # '' represents the "starts with" path
+     path('', include('main_app.urls')),
+ ]
+ Be sure to import the include function near the top.
+
+ Each item in the urlpatterns list defines a URL-based route or, 
+ as in the case above, mounts the routes contained in another urls.py 
+ module.
+
+After doing the previous and connecting the main_app/urls.py to the project_name/urls.py
+ You can close project_name/urls.py since all routes we define from this point forward 
+ will be defined within main_app/urls.py.
+
+include the boilerplate needed in main_app/urls.py:
+
+ from django.urls import path
+ from . import views
+	
+ urlpatterns = [
+	
+ ]
+
+We’ve imported the path function that will be used to define each route.
+We’ve also created the required urlpatterns list that will hold each 
+route we define for main_app.
+
+Define main_app’s Home Page URL
+In main_app/urls.py:
+
+urlpatterns = [
+  path('', views.home, name='home'),
+]
+The above code defines a root route using an empty string and maps it to 
+the view.home view function that does not exist yet - making the server 
+unhappy.
+
+The name='home' kwarg gives the route a names. Naming a route is 
+optional but is considered a best practice. We will see how naming a 
+route comes in handy later.
+
+The Home page route has been defined! On to the view…
