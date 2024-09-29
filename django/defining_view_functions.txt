@@ -1,0 +1,16 @@
+Defining View Functions
+
+We define all of the app’s views in main_app/views.py.
+define the home view function and render a non-existing template:
+
+from django.shortcuts import render
+
+# Define the home view
+def home(request):
+  return render(request, 'home.html')
+
+All view functions need to define a positional parameter to 
+accept the request object Django will be passing in.
+
+As expected, refreshing localhost:8000 will cause an error complaining 
+that the template does not exist.
