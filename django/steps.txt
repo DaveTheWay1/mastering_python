@@ -114,9 +114,22 @@ from django.urls import path
  We’ve imported the path function that will be used to define each route.
 
  step 17. Define main_app’s Home Page URL like in the below:
- 
+
  In main_app/urls.py:
 
 urlpatterns = [
   path('', views.home, name='home'),
 ]
+
+step 17. in main_app/views.py, define the home view function 
+and render a non-existing template:
+
+from django.shortcuts import render
+
+# Define the home view
+def home(request):
+  # Include an .html file extension - unlike when rendering EJS templates
+  return render(request, 'home.html')
+
+As expected, refreshing localhost:8000 will cause an error 
+complaining that the template does not exist
