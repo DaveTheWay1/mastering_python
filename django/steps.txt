@@ -133,3 +133,6 @@ def home(request):
 
 As expected, refreshing localhost:8000 will cause an error 
 complaining that the template does not exist
+
+step 18. create the templates folder in the main app
+and create an html file in this case home.html
