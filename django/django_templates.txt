@@ -1,0 +1,11 @@
+Using Django Templates
+
+By default, a Django project is configured to 
+look for templates inside of a templates folder 
+within each app’s folder (main_app in this case).
+
+therefore, creating a folder in the main_app folder
+and naming it templates is necessary. 
+
+create the templates using .html and include them into 
+the views functions as necessary.
