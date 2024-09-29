@@ -9,3 +9,7 @@ and naming it templates is necessary.
 
 create the templates using .html and include them into 
 the views functions as necessary.
+
+after the home page template is created, the routing in the main_app/urls.py 
+for the following templates should be 'template_name/'. the forward slash
+after is crucial in django.
