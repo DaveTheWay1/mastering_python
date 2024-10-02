@@ -1,0 +1,46 @@
+Template Inheritance (Partials)
+
+Django has a template inheritance feature built-in.
+
+The reason Django calls it template inheritance is because:
+
+When a template extends a “base” template, it’s content 
+defined in a “block” replaces the same “block” in the “base” 
+template as shown below:
+
+Say for example, you want the top and bottom content to follow 
+on certain pages while the middle content changes, that is what
+template inheritance is all about.
+
+for example:
+
+base.html            |   other.html
+{% block content %}  |   {% extends 'base.html' %}
+                     |
+{% endblock %}       |   {% block content %}
+                     |
+                     |   {% endblock %}
+                     |
+
+*** everything within block content and endblock can be exhange for something new
+on every template when extending. what wont change is the top and bottom that surrounds
+the content block
+
+typically, for this kind of event, we create a base template
+
+The “base” template contains all of the boilerplate and 
+markup that belongs on every template that extends it, 
+such as the <head>, navigation, even a footer if you wish.
+
+👀 Multiple “base” templates is rarely needed but can 
+be defined if need be.
+
+
+the most important part of the boilerplate in regards to template inheritance is:
+
+{% block content %}
+{% endblock %}
+
+This is our first look at DTL template tags, block & endblock, 
+enclosed within the template tag delimiters {% %}.
+
