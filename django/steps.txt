@@ -137,3 +137,5 @@ complaining that the template does not exist
 step 18. create the templates folder in the main app
 and create an html file in this case home.html and other files
 as needed.
+
+step 19. create the base template for template inheritance
