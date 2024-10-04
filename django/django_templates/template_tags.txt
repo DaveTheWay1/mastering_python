@@ -1,0 +1,12 @@
+Django Template Tags
+
+"block content" and "endblock" are examples
+of django template tags
+
+other tags exist like "autoescape", "comment", and more:
+https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#ref-templates-builtins-tags
+
+Django template tags CONTROl 
+logic WITHIN a template. Depending upon the tag, 
+they may, or may not, result in content being 
+emitted in the page.
