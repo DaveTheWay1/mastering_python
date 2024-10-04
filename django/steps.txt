@@ -139,3 +139,9 @@ and create an html file in this case home.html and other files
 as needed.
 
 step 19. create the base template for template inheritance
+
+step 20. create the static folder in main_app and within it
+the css folder and within that a atyle that css.
+implement the style file into the file you wish to show the styling
+by adding load static django template tag and the link using the static
+template tag

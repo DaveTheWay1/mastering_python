@@ -1,0 +1,23 @@
+Including Static Files in a Template
+
+Django projects are pre-configured with a 
+'django.contrib.staticfiles' app installed for the 
+purpose of serving static files.
+
+At the bottom of settings.py, there is a STATIC_URL = 'static/' 
+variable that declares the name of the folder 
+that will contain static files within Django apps.
+
+create in the main_app folder a folder called static.
+within it, a css folder and within that create a style.css 
+and write css like normal
+
+on the template you wish to add the css;
+
+{% load static %}
+
+<!DOCTYPE html>
+
+and add the css link:
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
