@@ -140,8 +140,88 @@ as needed.
 
 step 19. create the base template for template inheritance
 
-step 20. create the static folder in main_app and within it
-the css folder and within that a atyle that css.
-implement the style file into the file you wish to show the styling
-by adding load static django template tag and the link using the static
-template tag
+step 20. create the static folder in main_app 
+
+step 21. within the static folder create a css folder
+
+step 22. within the css folder create the style.css 
+here, you create your css code as normal
+
+step 23. use the template tag load static in the base.html
+to apply the styling to add that extends the base.
+
+done so like in the below:
+{% load static %}
+
+<!DOCTYPE html>
+
+step 24. add the css link in the base.html 
+using the django template tag of static followed
+by the location of the style.css 
+
+done so like in the below: 
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+step 25. Render Data on templates
+  Step 1 - Identify the “Proper” Route
+  '/route_name' ex: '/cats'
+
+  Step 2 - Create the UI
+  For the UI, it makes sense to add the View All My Cats link to the navigation bar in base.html
+  ex: <li><a href="/route_name">route name etc</a></li>
+
+  Step 3 - Define the Route
+  Now let’s add the new route to main_app/urls.py:
+  ex: 
+      urlpatterns = [
+      path('', views.home, name='home'),
+      path('about/', views.about, name='about'),
+      # route for route_name index
+      path('route_name/', views.route_name_index, name='index'),
+    ]
+  
+  Step 4 - Code the View
+  # Add new view
+
+  example: 
+
+  def cats_index(request):
+    # We pass data to a template very much like we did in Express!
+    return render(request, 'route_name/index.html', {
+      'name_of_data_being_passed': data_name
+    })
+
+  # views.py
+
+    # Add this data list below the imports
+    data_name = [
+      {'name': 'Lolo', 'breed': 'tabby', 'description': 'furry little demon', 'age': 3},
+      {'name': 'Sachi', 'breed': 'calico', 'description': 'gentle and loving', 'age': 2},
+    ]
+
+  Step 5 - Respond to the Client’s HTTP Request
+  example: mkdir main_app/templates/data_name
+  touch main_app/templates/data_name/index.html
+
+  example: in template:
+    {% extends 'base.html' %}
+  {% block content %}
+
+  <h1>Cat List</h1>
+
+  {% for data in data_name %}
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ data.name }}</span>
+        <p>Breed: {{ data.breed }}</p>
+        <p>Description: {{ data.description }}</p>
+        {% if data.age > 0 %}
+          <p>Age: {{ data.age }}</p>
+        {% else %}
+          <p>Age: Kitten</p>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+
+  {% endblock %}
