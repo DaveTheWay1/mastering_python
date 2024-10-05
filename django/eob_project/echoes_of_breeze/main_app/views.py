@@ -5,3 +5,14 @@ def home(request):
 
 def about(request):
     return render(request, 'about.html')
+
+def gems_index(request):
+    return render(request, 'gems/index.html', {
+        'gems':gems
+    })
+
+gems = [
+    {'name': 'Garren Park'},
+    {'name': 'Hayward Regional Park'},
+    {'name': 'Coyote Hills'}
+]
