@@ -24,4 +24,4 @@ staticfiles/
 # OS-specific
 .DS_Store
 
-catcollector/main_app/migrations/
+echoes_of_breeze/main_app/migrations/
