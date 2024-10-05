@@ -10,3 +10,25 @@ Django template tags CONTROl
 logic WITHIN a template. Depending upon the tag, 
 they may, or may not, result in content being 
 emitted in the page.
+
+There are two control flow template tag constructs 
+you’ll use quite a bit:
+
+The {% for %} / {% endfor %} block used to perform looping
+The {% if %} / {% elif %} / {% else %} / {% endif %} block used for 
+branching.
+
+👀 Django template tags are designed to mimic their Python counterparts, 
+however, they are not embedding Python the way EJS embedded JavaScript. 
+For example, Python does not have endfor or endif as part of the language.
+
+The double curly brace syntax {{}} is used to print the values of variables 
+and object properties.
+
+WHEN IT COMES TO METHOD IN TEMPLATE Tags
+If the property on an object is a method, it is automatically 
+invoked by the template engine without any arguments and we do 
+not put parenthesis after the method name. For example, 
+assuming a person object has a getFullName method, it would be 
+printed like this {{ person.getFullName }} in the template. This is 
+another example of how DTL is its own language and not Python.
