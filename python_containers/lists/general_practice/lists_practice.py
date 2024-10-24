@@ -23,3 +23,9 @@ print(scores)
 
 for score in scores:
   print(f"name: {score['name']}, score: {score['points']}")
+
+print("  ")
+print(scores)
+
+scores[0]['learning'] = True
+print(scores)
