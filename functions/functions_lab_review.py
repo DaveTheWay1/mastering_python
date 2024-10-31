@@ -28,6 +28,15 @@ Exercise 2
 '''
 # Your solution to Exercise 2 here:
 
+def largest_num(nums):
+    largest_num = 0
+    for num in nums:
+        if num > largest_num:
+            largest_num = num
+    return largest_num
+print(f"largest num: {largest_num([1,2,3,4,4,3,2])}")
+
+# * using args
 def largest(*args):
     L = 0
     for arg in args:
@@ -35,7 +44,7 @@ def largest(*args):
             L = arg
             print(L)
     return L
-print(largest(3,2,4,1,2,6,2,3,4))
+print(f"largest num: {largest(3,2,4,1,2,6,2,3,4)}")
 
 '''
 Exercise 3
@@ -50,6 +59,10 @@ For example:
 '''
 # Your solution to Exercise 3 here:
 
+def occurences(a,b):
+    count = a.count(b)
+    return(count)
+print(occurences("hellllllllo",'ll'))
 
 
 '''
@@ -64,3 +77,10 @@ For example:
     product(4, 0.5, 5, 1) # returns 10.0
 '''
 # Your solution to Exercise 4 here:
+
+def product(*args):
+    x = 1
+    for arg in args:
+        x *= arg
+    return x
+print(product(5,2,3))
