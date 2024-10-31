@@ -1,5 +1,8 @@
 class Dog():
     def __init__(self, name, age=0):
+    # * Python automatically calls the __init__ magic method when a new dog is created.
+    # __init__ is short for “initialize” because the method is used to initialize 
+    # the properties of the new object.
         # * self parameter in class init method is only that; a parameter.
         # - this is because, for exmaple, cazador.bark(),,, after creating
         # an object of that class and labing it cazador.. it becomes the first thing
