@@ -38,5 +38,10 @@ print(repr(cazador))
 # * str is for readability for the users while repr is for developers to 
 # receive and unambiguous return and further debug
 
+# * for better understanding, str is to be usedto return normal strings that 
+# contain details of an object as you desire 
+# * repr on the other hand is to clearly identify what is what like in the example
+# rather than to return a normal string
+
 print(cazador.name, cazador.age)
 cazador.bark()
